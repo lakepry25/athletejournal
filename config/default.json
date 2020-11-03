@@ -1,0 +1,3 @@
+{
+    "mongoURI": "mongodb+srv://lake:lap6056*@cluster0.elo7o.mongodb.net/iosBlog?retryWrites=true&w=majority"
+}
