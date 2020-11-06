@@ -49,7 +49,7 @@ router.post('/',
 router.get('/', async (req, res) => {
     try {
         const blogs = await Blog.find().sort({ date: -1 });
-        res.json({ blogArray: blogs });
+        res.json({ blogs: blogs });
     } catch (err) {
         console.error(err.message);
         res.status(500).send('Server Error');
