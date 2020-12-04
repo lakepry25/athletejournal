@@ -13,6 +13,9 @@ router.post('/',
     [
         auth,
         [
+            check('name', 'Name is required')
+                .not()
+                .isEmpty(),
             check('text', 'Text is required')
                 .not()
                 .isEmpty()
@@ -29,7 +32,7 @@ router.post('/',
 
             const newBlog = new Blog({
                 text: req.body.text,
-                name: user.name,
+                name: req.body.name,
                 user: req.user.id
             });
 
